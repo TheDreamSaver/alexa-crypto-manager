@@ -1,0 +1,1150 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "crypto manager",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": [
+                        "its all",
+                        "no",
+                        "nope",
+                        "nothing",
+                        "that will be all",
+                        "no thanks",
+                        "i am done"
+                    ]
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "help me alexa",
+                        "alexa help"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "nothing",
+                        "no thanks",
+                        "I am done",
+                        "no",
+                        "nope",
+                        "its all",
+                        "that will be all"
+                    ]
+                },
+                {
+                    "name": "customIntent",
+                    "slots": [],
+                    "samples": [
+                        "hello",
+                        "hi",
+                        "hola"
+                    ]
+                },
+                {
+                    "name": "describeIntent",
+                    "slots": [],
+                    "samples": [
+                        "Tell me about my portfolio",
+                        "my portfolio",
+                        "describe my portfolio",
+                        "what does my portfolio look like",
+                        "describe my account",
+                        "my account",
+                        "can you tell me my account details",
+                        "tell me my portfolio details",
+                        "my account details"
+                    ]
+                },
+                {
+                    "name": "getChangeOfPortfolioIntent",
+                    "slots": [],
+                    "samples": [
+                        "what is the change in value of my portfolio",
+                        "what is the change in my coins",
+                        "change in my portfolio",
+                        "change of my portfolio",
+                        "what is the change in my portfolio"
+                    ]
+                },
+                {
+                    "name": "getValueOfPortfolioInAltIntent",
+                    "slots": [
+                        {
+                            "name": "fiat",
+                            "type": "fiatName"
+                        }
+                    ],
+                    "samples": [
+                        "what is the value of my portfolio in {fiat}",
+                        "value of my portfolio in {fiat}",
+                        "my portfolio in {fiat}",
+                        "portfolio in {fiat}",
+                        "value of portfolio in {fiat}"
+                    ]
+                },
+                {
+                    "name": "getValueOfPortfolioIntent",
+                    "slots": [],
+                    "samples": [
+                        "what is the current value of my coins",
+                        "what is the current value of my portfolio",
+                        "value of my portfolio"
+                    ]
+                },
+                {
+                    "name": "NameIntent",
+                    "slots": [
+                        {
+                            "name": "name",
+                            "type": "nameType",
+                            "samples": [
+                                "the name is {name}",
+                                "my name is {name}",
+                                "{name}",
+                                "i am {name}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "my name is {name}",
+                        "{name}",
+                        "the name is {name}",
+                        "i am {name}",
+                        "my name is",
+                        "the name"
+                    ]
+                },
+                {
+                    "name": "newCryptosIntent",
+                    "slots": [
+                        {
+                            "name": "crypto",
+                            "type": "currencyName",
+                            "samples": [
+                                "I have {crypto}",
+                                "I hold {crypto}",
+                                "add {crypto}",
+                                "add {crypto} to my portfolio",
+                                "add {amount} point {fractionamount} {crypto} to my portfolio",
+                                "add {amount} {crypto} to my portfolio",
+                                "add {amount} point {fractionamount} {crypto} ",
+                                "add {amount} point {fractionamount} {crypto} coins",
+                                "add {amount} {crypto} ",
+                                "{crypto} "
+                            ]
+                        },
+                        {
+                            "name": "amount",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "I hold {amount} of {crypto}",
+                                "I hold {amount}",
+                                "I have {amount}",
+                                "I own {amount} {crypto}",
+                                "I own {amount} point {fractionamount} {crypto}",
+                                "{amount}",
+                                "{amount} point {fractionamount}"
+                            ]
+                        },
+                        {
+                            "name": "fractionamount",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "add new crypto",
+                        "add new cryptocurrency",
+                        "add new coin",
+                        "add cryptocurrency",
+                        "add coins",
+                        "add coins to portfolio",
+                        "add new coins to my portfolio",
+                        "add {crypto} to my portfolio",
+                        "add new cryptocurrency to my account",
+                        "add {crypto} to my account",
+                        "add {amount} point {fractionamount} {crypto} to my portfolio",
+                        "add {amount} point {fractionamount} {crypto} ",
+                        "add {amount} point {fractionamount} {crypto} coins",
+                        "add {amount} {crypto} ",
+                        "{crypto}",
+                        "{amount} {crypto}",
+                        "{amount} point {fractionamount} {crypto}"
+                    ]
+                },
+                {
+                    "name": "removeCryptosIntent",
+                    "slots": [
+                        {
+                            "name": "crypto",
+                            "type": "currencyName",
+                            "samples": [
+                                "remove {crypto}",
+                                "remove {crypto} from my portfolio",
+                                "{crypto}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "remove {crypto} from my portfolio",
+                        "remove cryptos from my portfolio",
+                        "remove cryptos from my account",
+                        "remove {crypto} from my account",
+                        "remove cryptocurrency",
+                        "remove coin",
+                        "delete coin",
+                        "delete {crypto} from my account",
+                        "delete cryptos",
+                        "delete {crypto} from my portfolio"
+                    ]
+                },
+                {
+                    "name": "updateCryptosIntent",
+                    "slots": [
+                        {
+                            "name": "crypto",
+                            "type": "currencyName",
+                            "samples": [
+                                "update {crypto}",
+                                "update {crypto} to {newamount}",
+                                "update {crypto} to {newamount} point {newfraction}",
+                                "edit {crypto}",
+                                "edit {crypto} to {newamount}",
+                                "edit {crypto} to {newamount} point {newfraction}",
+                                "{crypto}"
+                            ]
+                        },
+                        {
+                            "name": "newamount",
+                            "type": "AMAZON.NUMBER",
+                            "samples": [
+                                "{newamount} point {newfraction}",
+                                "{newamount}",
+                                "I now own {newamount} point {newfraction} {crypto}",
+                                "I own {newamount} point {newfraction} {crypto}",
+                                "I own {newamount} {crypto}",
+                                "I have {newamount}",
+                                "I hold {newamount}",
+                                "I hold {newamount} of {crypto}"
+                            ]
+                        },
+                        {
+                            "name": "newfraction",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "update {crypto} from my portfolio",
+                        "update cryptos",
+                        "update {crypto} from my account",
+                        "update coin",
+                        "update cryptocurrency",
+                        "edit coin",
+                        "edit {crypto} ",
+                        "edit cryptocurrency",
+                        "edit cryptos from my account",
+                        "edit cryptos in my account",
+                        "edit cryptos in my portfolio",
+                        "update {crypto}",
+                        "update {crypto} to {newamount}",
+                        "update {crypto} to {newamount} point {newfraction}",
+                        "edit {crypto} to {newamount} point {newfraction}",
+                        "edit {crypto} to {newamount}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "currencyName",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "bitcoin",
+                                "synonyms": [
+                                    "BTC"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ripple",
+                                "synonyms": [
+                                    "XRP"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ethereum",
+                                "synonyms": [
+                                    "ether",
+                                    "ETH"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bitcoin cash"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bitcoin gold"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ethereum classic"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "kucoin shares"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "kyber network"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "flash",
+                                "synonyms": [
+                                    "flashcoin",
+                                    "flash coin"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "cardano"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "litecoin"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "stellar"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "neo"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "eos"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "nem"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "iota"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "dash"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "monero"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "tron"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "lisk"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "vechain"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "populous"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "tether"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "qtum"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "raiblocks",
+                                "synonyms": [
+                                    "nano"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "icon"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "omisego"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "zcash"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "steem"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "binance coin"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "stratis"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "verge"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bytecoin bcn",
+                                "synonyms": [
+                                    "bytecoin"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "siacoin"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bitshares"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "dogecoin",
+                                "synonyms": [
+                                    "doggy coin",
+                                    "doge coin",
+                                    "dogy coin",
+                                    "dogycoin"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "fiatName",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "AUD",
+                                "synonyms": [
+                                    "australian dollar"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "BRL",
+                                "synonyms": [
+                                    "brazilian real",
+                                    "real"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "CAD",
+                                "synonyms": [
+                                    "canadian dollar"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "CHF",
+                                "synonyms": [
+                                    "swiss franc",
+                                    "franc"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "CLP",
+                                "synonyms": [
+                                    "chilean peso"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "CNY",
+                                "synonyms": [
+                                    "chinese yuan",
+                                    "yuan",
+                                    "renminbi"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "CZK",
+                                "synonyms": [
+                                    "czech koruna"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "DKK",
+                                "synonyms": [
+                                    "danish krone"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "EUR",
+                                "synonyms": [
+                                    "euro"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "GBP",
+                                "synonyms": [
+                                    "british pound",
+                                    "pound sterling",
+                                    "pound",
+                                    "great britain pound"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "HKD",
+                                "synonyms": [
+                                    "hong kong dollar"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "HUF",
+                                "synonyms": [
+                                    "hungarian forint",
+                                    "forint"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "IDR",
+                                "synonyms": [
+                                    "indonesian rupiah",
+                                    "indonesian rupee"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ILS",
+                                "synonyms": [
+                                    "israeli new shekel",
+                                    "shekel",
+                                    "israeli shekel"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "INR",
+                                "synonyms": [
+                                    "indian rupee",
+                                    "rupee",
+                                    "indian rupees",
+                                    "rupees"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "JPY",
+                                "synonyms": [
+                                    "japanese yen",
+                                    "yen"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "KRW",
+                                "synonyms": [
+                                    "south korean won",
+                                    "won"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "MXN",
+                                "synonyms": [
+                                    "mexican peso"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "MYR",
+                                "synonyms": [
+                                    "malaysian ringgit",
+                                    "ringgit"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "NOK",
+                                "synonyms": [
+                                    "norwegian krone"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "NZD",
+                                "synonyms": [
+                                    "new zealand dollar"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "PHP",
+                                "synonyms": [
+                                    "philippine piso",
+                                    "philippine peso"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "PKR",
+                                "synonyms": [
+                                    "pakistani rupee"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "PLN",
+                                "synonyms": [
+                                    "zloty",
+                                    "polish zloty"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "RUB",
+                                "synonyms": [
+                                    "ruble",
+                                    "russian ruble"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "SEK",
+                                "synonyms": [
+                                    "swedish krona",
+                                    "krona"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "SGD",
+                                "synonyms": [
+                                    "singapore dollar"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "THB",
+                                "synonyms": [
+                                    "thai baht",
+                                    "baht"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "TRY",
+                                "synonyms": [
+                                    "lira",
+                                    "turkish lira"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "TWD",
+                                "synonyms": [
+                                    "taiwan dollar"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ZAR",
+                                "synonyms": [
+                                    "rand",
+                                    "south african rand"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "USD",
+                                "synonyms": [
+                                    "US dollars",
+                                    "dollars",
+                                    "United States dollar"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "BTC",
+                                "synonyms": [
+                                    "bitcoin"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ETH",
+                                "synonyms": [
+                                    "ether",
+                                    "ethereum"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "XRP",
+                                "synonyms": [
+                                    "ripple"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "FLASH",
+                                "synonyms": [
+                                    "flash",
+                                    "flashcoin"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "BCH",
+                                "synonyms": [
+                                    "bitcoin cash"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ADA",
+                                "synonyms": [
+                                    "cardano"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "LTC",
+                                "synonyms": [
+                                    "litecoin"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "NEO",
+                                "synonyms": [
+                                    "neo"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "XLM",
+                                "synonyms": [
+                                    "stellar",
+                                    "stellar lumen",
+                                    "lumen"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "EOS",
+                                "synonyms": [
+                                    "eos"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "MIOTA",
+                                "synonyms": [
+                                    "iota",
+                                    "miota"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "XEM",
+                                "synonyms": [
+                                    "nem",
+                                    "xem"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "DASH",
+                                "synonyms": [
+                                    "dash"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "XMR",
+                                "synonyms": [
+                                    "monero"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "LSK",
+                                "synonyms": [
+                                    "lisk"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "TRX",
+                                "synonyms": [
+                                    "tron"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "DOGE",
+                                "synonyms": [
+                                    "dogecoin",
+                                    "doggy coin",
+                                    "doge coin",
+                                    "dogycoin",
+                                    "dogy coin"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "XVG",
+                                "synonyms": [
+                                    "verge"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "nameType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Ashish"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Rob"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "John"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "James"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Alex"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Tobey"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Randy"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Shubham"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Rohit"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "NameIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "name",
+                            "type": "nameType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Intent-NameIntent.IntentSlot-name"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "newCryptosIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "crypto",
+                            "type": "currencyName",
+                            "confirmationRequired": true,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "confirmation": "Confirm.Intent-newCryptosIntent.IntentSlot-crypto",
+                                "elicitation": "Elicit.Intent-newCryptosIntent.IntentSlot-crypto"
+                            }
+                        },
+                        {
+                            "name": "amount",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Intent-newCryptosIntent.IntentSlot-amount"
+                            }
+                        },
+                        {
+                            "name": "fractionamount",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "removeCryptosIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "crypto",
+                            "type": "currencyName",
+                            "confirmationRequired": true,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "confirmation": "Confirm.Intent-removeCryptosIntent.IntentSlot-crypto",
+                                "elicitation": "Elicit.Intent-removeCryptosIntent.IntentSlot-crypto"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "updateCryptosIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "crypto",
+                            "type": "currencyName",
+                            "confirmationRequired": true,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "confirmation": "Confirm.Intent-updateCryptosIntent.IntentSlot-crypto",
+                                "elicitation": "Elicit.Intent-updateCryptosIntent.IntentSlot-crypto"
+                            }
+                        },
+                        {
+                            "name": "newamount",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Intent-updateCryptosIntent.IntentSlot-newamount"
+                            }
+                        },
+                        {
+                            "name": "newfraction",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Intent-NameIntent.IntentSlot-name",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please tell me your name"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Intent-newCryptosIntent.IntentSlot-crypto",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "which cryptocurrency do you want to add to your portfolio?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent-newCryptosIntent.IntentSlot-crypto",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "You want to add {crypto} right?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Intent-newCryptosIntent.IntentSlot-amount",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "how much of {crypto} do you hold?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Intent-removeCryptosIntent.IntentSlot-crypto",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "which cryptocurrency do you want to remove from your portfolio?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent-removeCryptosIntent.IntentSlot-crypto",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "You want to remove {crypto}. is that correct?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Intent-updateCryptosIntent.IntentSlot-crypto",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "which cryptocurrency in your portfolio do you want to update?"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent-updateCryptosIntent.IntentSlot-crypto",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "You want to update {crypto} , right?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Intent-updateCryptosIntent.IntentSlot-newamount",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "what is the new amount of {crypto} that you hold?"
+                    }
+                ]
+            }
+        ]
+    }
+}
